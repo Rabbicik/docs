@@ -27,48 +27,6 @@ Our products are fully compatible with the most popular frameworks — **QBCore*
 
 ---
 
-## 🛒 What We Offer
-
-### 🖥️ XR-MDT — Advanced Modular Tablet System
-> **Price:** €36.88 · **Available on:** [xrcore.tebex.io](https://xrcore.tebex.io)
-
-Our flagship product — a comprehensive **faction management ecosystem** built for FiveM roleplay servers.
-
-| Feature | Description |
-| :--- | :--- |
-| 🚔 **Police (LSPD)** | Full dashboard, citizen profiles with photos & records, incident/report creation, e-warrants, vehicle database |
-| 🚑 **EMS** | Patient medical records, treatment history, emergency alerts on dashboard |
-| ⚖️ **DOJ (Justice)** | Court case management, legal records, cross-faction data access |
-| 🏢 **Business** | Dedicated tools for managing private in-game businesses |
-| 📡 **Dispatch** | Modern dispatch system with real-time unit tracking on map |
-| 👥 **Employee Management** | Hire, promote, fire, and manage staff directly from the tablet |
-
-**Key Technical Highlights:**
-- ⚡ **0.00ms idle** — outstanding resource optimization
-- 🎨 Built on **React + Vite** for a modern, responsive UI
-- 🔧 **Fully configurable** — enable/disable modules, customize permissions per rank
-- 🌍 **Translation-ready** — multi-language support out of the box
-- 📋 **Integrated Penal Code** — built-in legal code system for realistic RP
-
----
-
-## 📚 Documentation Index
-
-This repository contains the official documentation for our products. Each product has its own folder with comprehensive guides.
-
-### XR-MDT Documentation
-| Document | Description |
-| :--- | :--- |
-| [📖 Introduction](xr-mdt/introduction.md) | Overview of XR-MDT features and capabilities |
-| [🔧 Installation Guide](xr-mdt/installation.md) | Step-by-step installation for QBCore, ESX & Qbox |
-| [⚙️ Configuration](xr-mdt/configuration.md) | All config options explained — jobs, permissions, codes |
-| [🎮 How to Use](xr-mdt/how-to-use.md) | Commands, keybinds, and module walkthroughs |
-| [🐛 Common Issues](xr-mdt/common-issues.md) | Troubleshooting guide for frequent problems |
-| [🔗 Supported Scripts](xr-mdt/supported-scripts.md) | Compatible frameworks, inventories & banking systems |
-| [📡 API — Client](xr-mdt/api/client.md) | Client-side exports, events & dispatch integration |
-| [📡 API — Server](xr-mdt/api/server.md) | Server-side bridge, events & conviction logic |
-
----
 
 ## 🔗 Links & Support
 

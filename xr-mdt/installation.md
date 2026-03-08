@@ -1,4 +1,7 @@
-# Installation Guide
+---
+title: "Installation"
+description: "Step-by-step guide to installing XR-MDT on your FiveM server."
+---
 
 Follow these steps for a complete, step-by-step installation of **XR-MDT** tailored for your framework.
 

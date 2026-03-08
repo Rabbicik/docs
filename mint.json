@@ -1,0 +1,72 @@
+{
+    "name": "XR-Core Documentation",
+    "logo": {
+        "light": "logo.png",
+        "dark": "logo.png"
+    },
+    "favicon": "logo.png",
+    "colors": {
+        "primary": "#a855f7",
+        "light": "#d8b4fe",
+        "dark": "#7e22ce",
+        "anchors": {
+            "from": "#a855f7",
+            "to": "#7e22ce"
+        }
+    },
+    "topbarLinks": [
+        {
+            "name": "Website",
+            "url": "https://xr-core.pl"
+        },
+        {
+            "name": "Support",
+            "url": "https://dc.xr-core.pl"
+        },
+        {
+            "name": "Store",
+            "url": "https://xrcore.tebex.io"
+        }
+    ],
+    "topbarCtaButton": {
+        "name": "Get Support",
+        "url": "https://dc.xr-core.pl"
+    },
+    "navigation": [
+        {
+            "group": "Introduction",
+            "pages": [
+                "xr-mdt/introduction"
+            ]
+        },
+        {
+            "group": "Installation",
+            "pages": [
+                "xr-mdt/installation",
+                "xr-mdt/configuration",
+                "xr-mdt/how-to-use"
+            ]
+        },
+        {
+            "group": "Compatibility & Support",
+            "pages": [
+                "xr-mdt/supported-scripts",
+                "xr-mdt/common-issues"
+            ]
+        },
+        {
+            "group": "API Reference",
+            "pages": [
+                "xr-mdt/api/client",
+                "xr-mdt/api/server"
+            ]
+        }
+    ],
+    "footerSocials": {
+        "discord": "https://dc.xr-core.pl",
+        "website": "https://xr-core.pl"
+    },
+    "appearance": {
+        "defaultMode": "dark"
+    }
+}

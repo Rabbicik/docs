@@ -1,4 +1,7 @@
-# Introduction
+---
+title: "Introduction"
+description: "Welcome to the XR-MDT documentation hub."
+---
 
 Welcome to the **XR-MDT** documentation!
 

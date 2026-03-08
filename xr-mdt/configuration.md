@@ -1,4 +1,7 @@
-# Configuration
+---
+title: "Configuration"
+description: "Detailed explanation of all configuration files and settings."
+---
 
 The **XR-MDT** system is fully configurable using the files in the `configs/` folder. Below you'll find a description of the most important settings.
 
