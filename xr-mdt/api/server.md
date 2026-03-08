@@ -1,3 +1,8 @@
+---
+title: "API - Server Side"
+description: "Documentation for server-side exports and events."
+---
+
 # API - Server Side
 
 Most server-side interaction occurs through the files in the `editable/server/` folder.

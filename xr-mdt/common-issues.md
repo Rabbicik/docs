@@ -1,3 +1,8 @@
+---
+title: "Common Issues"
+description: "Troubleshooting guide for the most frequent XR-MDT problems."
+---
+
 # Common Issues
 
 Here you will find solutions to the most common issues related to **XR-MDT**.

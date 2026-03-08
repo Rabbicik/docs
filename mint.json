@@ -34,31 +34,31 @@
     },
     "navigation": [
         {
-            "group": "Introduction",
+            "group": "XR-MDT",
             "pages": [
-                "xr-mdt/introduction"
-            ]
-        },
-        {
-            "group": "Installation",
-            "pages": [
-                "xr-mdt/installation",
-                "xr-mdt/configuration",
-                "xr-mdt/how-to-use"
-            ]
-        },
-        {
-            "group": "Compatibility & Support",
-            "pages": [
-                "xr-mdt/supported-scripts",
-                "xr-mdt/common-issues"
-            ]
-        },
-        {
-            "group": "API Reference",
-            "pages": [
-                "xr-mdt/api/client",
-                "xr-mdt/api/server"
+                "xr-mdt/introduction",
+                {
+                    "group": "Installation & Config",
+                    "pages": [
+                        "xr-mdt/installation",
+                        "xr-mdt/configuration"
+                    ]
+                },
+                "xr-mdt/how-to-use",
+                {
+                    "group": "Support & Compatibility",
+                    "pages": [
+                        "xr-mdt/supported-scripts",
+                        "xr-mdt/common-issues"
+                    ]
+                },
+                {
+                    "group": "API Reference",
+                    "pages": [
+                        "xr-mdt/api/client",
+                        "xr-mdt/api/server"
+                    ]
+                }
             ]
         }
     ],

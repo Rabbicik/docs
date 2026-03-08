@@ -1,3 +1,8 @@
+---
+title: "How to Use"
+description: "Commands and walkthrough of all XR-MDT modules."
+---
+
 # How to Use
 
 All the most important commands and features of **XR-MDT** are described below.
