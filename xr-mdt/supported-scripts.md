@@ -3,8 +3,6 @@ title: "Supported Scripts"
 description: "Frameworks, inventories, and banking systems compatible with XR-MDT."
 ---
 
-# Supported Scripts
-
 **XR-MDT** is built modularly and supports many popular FiveM scripts.
 
 ## Frameworks

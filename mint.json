@@ -33,6 +33,7 @@
         "url": "https://dc.xr-core.pl"
     },
     "navigation": [
+        "overview",
         {
             "group": "XR-MDT",
             "pages": [

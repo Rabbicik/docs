@@ -1,8 +1,11 @@
+---
+title: "Overview"
+description: "Welcome to the official XR-Core documentation hub for FiveM scripts."
+---
+
 <p align="center">
   <img src="https://xr-core.pl/xrlogobiale.png" alt="XR-Core Logo" width="180"/>
 </p>
-
-<h1 align="center">📘 XR-Core Documentation</h1>
 
 <p align="center">
   <b>Official documentation hub for all XR-Core scripts & resources for FiveM.</b><br/>
@@ -38,8 +41,8 @@ Our products are fully compatible with the most popular frameworks — **QBCore*
 
 ### 💡 Need Help?
 
-1. **Check the docs first** — browse through the documentation pages above
-2. **Search Common Issues** — your problem might already be solved in [Common Issues](xr-mdt/common-issues.md)
+1. **Check the docs first** — browse through the documentation pages
+2. **Search Common Issues** — your problem might already be solved in [Common Issues](xr-mdt/common-issues)
 3. **Join our Discord** — open a support ticket at [dc.xr-core.pl](https://dc.xr-core.pl) and our team will assist you
 
 ---

@@ -3,8 +3,6 @@ title: "API - Client Side"
 description: "Documentation for client-side exports and events."
 ---
 
-# API - Client Side
-
 External resources (e.g., phone, radar, robbery scripts) can communicate with **XR-MDT** client-side using the following features.
 
 ## Exports
