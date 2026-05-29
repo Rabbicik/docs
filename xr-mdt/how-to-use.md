@@ -1,40 +1,99 @@
----
-title: "How to Use"
-description: "Commands and walkthrough of all XR-MDT modules."
----
+# How to Use
 
-All the most important commands and features of **XR-MDT** are described below.
+Discover everything you need to execute rapid workflows seamlessly with **XR-MDT**.
 
-## Commands
+## 🎬 Commands & Keybinds
 
-| Command | Description | Default Key | Permissions |
+| Command | Default Key | Description | Access |
 | :--- | :--- | :--- | :--- |
-| `/mdt` | Opens the main tablet panel | `INSERT` | Jobs (Police, EMS, DOJ) |
-| `/mdt_dispatch` | Opens the dispatch view | `DELETE` | Jobs (Police, EMS) |
-| `/panic_button` | Panic button (sends an alert to all) | `CTRL + L` | Police, EMS |
-| `/bk1, /bk2, /bk3` | Call for backup (Code 1, 2, 3) | - | Police |
-| `/10-13` | "Officer Down" alert | - | Police |
+| `/mdt` | `DELETE` | Toggles the MDT tablet | All configured jobs |
+| `/mdt_dispatch` | — | Toggles the Dispatch overlay panel | LSPD, EMS |
+| `/panic_button` | `CTRL + L` | Sends a panic button alert (10-sec cooldown) | LSPD, EMS |
+| `/bodycam` | — | Mounts / Unmounts Bodycam | LSPD, EMS |
+| `/bk1` | — | Sends a Code 2 backup alert | LSPD |
+| `/bk2` or `/bk` | — | Sends a Code 3 backup alert | LSPD |
+| `/bk3` | — | Sends a Code 3 critical backup alert | LSPD |
+| `/10-13` | — | Triggers an "Officer Down" alert to all emergency services | LSPD |
 
-## How to trigger the tablet? (Item usage)
+> [!TIP]
+> Key bindings can be overridden in `Settings → Key Bindings → FiveM` within the GTA V pause menu.
 
-If you have a `tablet` item, use it in your inventory to open the panel. You can also configure your own keys in the FiveM menu (`Settings > Key Bindings > FiveM`).
+---
 
-## Modules
+## 🔄 How the Tablet Opens
 
-### 🚔 LSPD (Police)
-*   **Search:** You can search for citizens by FirstName, LastName, or SSN.
-*   **Citizen Profile:** View notes, convictions, licenses, and vehicles. You can issue new licenses or fines here.
-*   **Incidents:** Create reports from events, add offenders, evidence, and mark location.
+1. Player presses the `/mdt` command (or uses the `tablet` item).
+2. The client sends `TriggerServerEvent('xr-mdt:server:requestOpenMDT')`.
+3. The server validates the player's job, retrieves grade-specific permissions, and sends `TriggerClientEvent('xr-mdt:client:open', source, data)`.
+4. The client routes the `open` signal to the correct app (police, ems, doj, or business).
+5. The NUI receives the `open` action with `{ type, permissions, factionConfig, locales }`.
 
-### 🚑 EMS (Medics)
-*   **Patient Records:** Review patient history.
-*   **Alerts:** Receive notifications of unconscious people directly on the dashboard.
+---
 
-### ⚖️ DOJ (Court / Prosecutors)
-*   Review records and incidents with limited permissions to some police data.
+## 📑 The A4 Document System
 
-## Settings
-All settings (e.g., threat level colors, vehicle prices in LSPD garage) can be found in the `configs/` folder.
-*   `configs/config.lspd.lua` - Police settings.
-*   `configs/config.ems.lua` - Medic settings.
-*   `configs/config.doj.lua` - Court settings.
+**XR-MDT** integrates a beautifully designed, strictly symmetrical multi-page layout engine.
+
+1. **Creating Documents:** Navigate to the `Documents` tab and click `New Document` or select a Template.
+2. **Page Pagination:** Standardized A4 dimensions. Text automatically paginating into new pages on overflow.
+3. **Drafting and Signatures:** Drop signature slots that use magnetic snapping. Upon signing, real-time sync establishes immutable timestamps.
+4. **Physicality:** Printing pushes a `document` item with embedded metadata (`doc_id`, `title`, `html_content`) to the player's inventory.
+
+See the full guide: [📄 A4 Document Engine](features/documents.md)
+
+---
+
+## 📹 WASM-Powered Bodycams
+
+Equip the `bodycam` item or use `/bodycam` to toggle the camera.
+
+* Your camera feed will appear in the `Cameras` tab of the MDT for colleagues to view.
+* Video encoding runs in the client's WASM thread — **no server-side processes** (FFmpeg etc.) are needed.
+* `IdleFPS` (low framerate buffer) keeps the stream responsive for viewers without impacting server performance.
+
+---
+
+## 📡 GPS & Tracking
+
+* **GPS Tracker:** Equip the `gps` item to appear on the dispatch map for your job.
+* **Tracking Band:** Equip the `tracking_band` item to track a citizen on the MDT map (e.g., ankle monitor).
+* Offline/disconnected players are automatically removed from the map — no ghost blips.
+
+---
+
+## 🗺️ Dispatch System
+
+Dispatch alerts can be created:
+- From within the MDT UI (manual entry).
+- Via the `/panic_button` command or `/bk` commands.
+- Via external script exports: `exports['xr-mdt']:createAlert(data)` or `exports['xr-mdt']:TriggerDispatch(...)`.
+- Via the server event: `TriggerEvent('xr-mdt:server:triggerDispatch', data)`.
+
+---
+
+## 🏬 Specific Job Modules
+
+### 🚔 Police (LSPD)
+* Citizen search by name, SSN, or citizen ID.
+* Vehicle search by plate or model.
+* Issue fines, warrants, and multi-charge sentences (fine + jail simultaneously).
+* Grant/revoke licenses (driver, weapon, etc.).
+* Manage the weapon armory (kits and stock).
+* Track units on the live dispatch map.
+
+### 🚑 EMS
+* Access medical records and patient history.
+* Bill patients (online: direct bank deduction, offline: phone invoice).
+* Revive players from the MDT (triggers `hospital:client:Revive`).
+* View emergency dispatch calls with precise coordinates.
+
+### ⚖️ DOJ
+* Manage court cases with suspect/vehicle/officer linkage.
+* Full citizen and vehicle lookup with warrant and evidence integration.
+* Protected from police data wipes — court documents require DOJ-specific authorization.
+
+### 🏢 Business (BizPad)
+* Manage employee roster: hire, fire, promote, suspend.
+* Update callsigns/badges and add HR notes.
+* View financial dashboard: revenue, expenses, weekly charts, recent transactions.
+* Integrates with `bank_statements` table for financial history.
