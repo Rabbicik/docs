@@ -51,6 +51,21 @@
                     ]
                 },
                 "xr-mdt/how-to-use",
+                "xr-mdt/weapon-serialization",
+                {
+                    "group": "Features",
+                    "pages": [
+                        "xr-mdt/features/audit-logs",
+                        "xr-mdt/features/documents"
+                    ]
+                },
+                {
+                    "group": "Guides",
+                    "pages": [
+                        "xr-mdt/guides/adding-business",
+                        "xr-mdt/guides/adding-police-unit"
+                    ]
+                },
                 {
                     "group": "Support & Compatibility",
                     "pages": [
@@ -62,7 +77,8 @@
                     "group": "API Reference",
                     "pages": [
                         "xr-mdt/api/client",
-                        "xr-mdt/api/server"
+                        "xr-mdt/api/server",
+                        "xr-mdt/api/editable"
                     ]
                 }
             ]
